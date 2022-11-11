@@ -4,10 +4,11 @@
 
 Things you may want to cover:
 _With updated text_
-*With some bold text*
+**With some bold text**
 
 * Ruby version
-##Ruby version
+## Ruby version
+
 * System dependencies
 
 * Configuration
