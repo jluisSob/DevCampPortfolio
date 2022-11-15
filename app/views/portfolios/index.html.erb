@@ -3,11 +3,11 @@
 <%= link_to "Create a new Item", new_portfolio_path%>
 
 <%= @portfolio_items.each do | portf |  %>
-  <p><%= link_to portf.title, portfolio_path(portf)  %></p>
+  <p><%= link_to portf.title, portfolio_show_path(portf) %></p>
   <p><%= portf.subtitle %></p>
   <p><%= portf.body %></p>
   <p><%= image_tag portf.thumb_image if !portf.thumb_image.nil? %></p>
   <%= link_to "Edit Item", edit_portfolio_path(portf ) %>
-  <%= link_to 'Destroy Portfolio Item', portfolio_path(portf), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Destroy Portfolio', portf, method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <% end %>
