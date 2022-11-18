@@ -7,4 +7,12 @@ class Portfolio < ApplicationRecord
   end
 
   scope :ruby_on_rails_portfolio_items, -> { where(subtitle: 'Ruby on Rails') }
+
+  afer_initialize :set_defaults
+
+  def set_defaults
+    # Let's have the ability to set the default values of the main_image and thumb_image
+    self.main_image ||= "http://placehold.it/600x400"
+    self.thumb_image ||= "http://placehold.it/350x200"
+  end
 end
